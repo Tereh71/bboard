@@ -1,88 +1,58 @@
 {% load bootstrap4 %}
 {% load static %}
-<!DOCTYPE html>
-<<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-
-  </body>
-</html>
-
-
-
-
-
-{%  %}
-{%  %}
-{%  %}
-{%  %}
-
 
 <html>
 <head>
-  <meta charset= "UTF- 8" >
-  <meta name="viewport" content="width=device-width, initial-scale=l, shrink-to-fit=no">
-  <title> {% block title %} Головна {% endblock %} - Дошка оголошень</title>
+  <meta charset= "UTF-8" >
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title> {% block title %}Головна{% endblock %} - Дошка оголошень</title>
   {% bootstrap_css %}
   <link rel= "stylesheet" type= "text/css" href = "{% static 'main/style.css' %}">
   {% bootstrap_javascript jquery= 'slim' %}
 </head>
-
 <body class = "container-fluid">
-<header class = "mb-4">
-  <h1 class= "display-1 tехt-сеntеr">Оголошення</h1>
-</header>
-
-<div class= " row">
-<ul clas s = " col nav j us t i fy-content-end borde r " >
-< l i class="nav- item" ><a class="nav- l ink"
-hrе f= " # " >Реєстрація< /а>< / l i>
-< l i class= " nav- item dropdown " >
-<а class="nav- l ink dropdown-toggle "
-data-toggle=" dropdown"
-href= " # " role="button" aria-haspopup= " t rue "
-a ria-expanded= " fa l s e " >Пpoфіль < / a>
-<div class="dropdown-menu " >
-<a class="dropdown-item" href= " # " >Moї оголошення</a>
-<а class="dropdown-item" hrеf= " # " >Змінити особисті дані</ а>
-<а class="dropdown-itern" hrеf= " # " >Змінити пароль </а>
-<div class=" dropdown-divide r " >< / div>
-<а class="dropdown-itern" hrеf= " # " >Вийти< /а>
-
-<div class=" dropdown-divide r " >< / div>
-<а class="dropdown-item" hrеf= " # " >Видалити < / а>
-< / div>
-< / l i >
-< l i class="nav-item"><a class= "nav- link"
-href= " # " >Bxід< /a>< / l i>
-</ul>
-< /div>
-<div class=" row">
-<nav clas s = " col-md-auto nav flex-column borde r " >
-<а class= " nav- link root "
-hre f= " { % url ' main : index ' % } " >Головна</а>
-<span class= "nav- l ink root font-we ight-bo ld">
-Нерухомість < / sраn>
-<а class="nav- link" hrеf= " # " >Житло</а>
-<а class="nav- link" hrеf=" # " >Склади< /а>
-<а class= "nav- link" hrеf= " # " >Гаражі</а>
-<span class= "nav- l ink root font-we ight-bold" href= " # " >
-Транспорт< / sраn>
-<а class="nav- link" hrеf= " # " >Легковий</а>
-<а class="nav- link" hrеf= " # " >Вантажний</а>
-</nav>
-<sect ion clas s = " co l border ру-2 " >
-{ % bootstrap_me s s ages % }
-{ % Ыосk content % }
-{ % endЫ ock % }
-< / s e ct i on>
-</div>
-< footer class="mt - 3 " >
-< р class=" text- right font- ital i c " > & copy; читачі . < /р>
-< / footer>
-</body>
+  <header class = "mb-4">
+    <h1 class= "display-1 tехt-сеntеr">Оголошення</h1>
+  </header>
+  <div class= "row">
+    <ul class = "col nav justify-content-end border">
+      <li class="nav-item"><a class="nav-link" hrеf= "#">Реєстрація</a></li>
+      <li class= "nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown"
+        href= "#" role="button" aria-haspopup="true" aria-expanded = "false">Пpoфіль</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href= "#">Moї оголошення</a>
+            <a class="dropdown-item" hrеf= "#">Змінити особисті дані</a>
+            <a class="dropdown-item" hrеf= "#" >Змінити пароль</a>
+            <div class=" dropdown-divider"></div>
+            <a class="dropdown-item" hrеf= "#" >Вийти</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" hrеf= "#" >Видалити</a>
+          </div>
+        </li>
+        <li class="nav-item"><a class= "nav-link" href= "#">Bxід</a></li>
+      </ul>
+    </div>
+    <div class="row">
+      <nav class = "col-md-auto nav flex-column border">
+        <a class= "nav-link root" href= "{% url 'main:index' %}">Головна</a>
+        <span class= "nav-link root font-weight-bold">Нерухомість </span>
+          <a class="nav-link" hrеf= "#">Житло</a>
+          <a class="nav-link" hrеf="#">Склади</a>
+          <a class= "nav-link" hrеf= "#">Гаражі</a>
+        <span class= "nav-link root font-weight-bold" href= "#" >Транспорт</span>
+          <a class="nav-link" hrеf= "#">Легковий</a>
+          <a class="nav-link" hrеf= "#">Вантажний</a>
+      </nav>
+      <section class = "col border pу-2">
+          {% bootstrap_messages %}
+          {% bloсk content %}
+          {% endblock %}
+      </section>
+    </div>
+      <footer class="mt-3" >
+        <p class=" text-right font-italic" >&copy; читачі.</p>
+      </footer>
+  </body>
 </html>
