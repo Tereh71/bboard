@@ -9,11 +9,11 @@
   <title> {% block title %}Головна{% endblock %} - Дошка оголошень</title>
   {% bootstrap_css %}
   <link rel= "stylesheet" type= "text/css" href = "{% static 'main/style.css' %}">
-  {% bootstrap_javascript jquery= 'slim' %}
+  {% bootstrap_javascript jquery='slim' %}
 </head>
 <body class = "container-fluid">
   <header class = "mb-4">
-    <h1 class= "display-1 tехt-сеntеr">Оголошення</h1>
+    <h1 class= "display-1 text-center">Оголошення</h1>
   </header>
   <div class= "row">
     <ul class = "col nav justify-content-end border">
@@ -47,7 +47,7 @@
       </nav>
       <section class = "col border pу-2">
           {% bootstrap_messages %}
-          {% bloсk content %}
+          {% block content %}
           {% endblock %}
       </section>
     </div>
