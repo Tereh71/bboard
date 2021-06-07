@@ -3,6 +3,8 @@ from django.http import HttpResponse, Http404
 from django.template import TemplateDoesNotExist
 from django.template.loader import get_template
 from django.contrib.auth.views import LoginView
+from django.contrib.auth.decorators import login_reqyired
+
 
 # Create your views here.
 def index (request):
@@ -16,3 +18,7 @@ def other_page(request, page):
     return HttpResponse(template.render(request=request))
 class BBLoginView(LoginView):
     template_name='main/login.html'
+
+@login_reqyired #декоратор @login_reqyired -  доступ до сторінки профілю надається тільки зареєстрованим користувачам
+def profile(request):
+    return render(request, 'main/profile.html')
