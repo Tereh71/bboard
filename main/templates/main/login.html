@@ -1,0 +1,17 @@
+{% extends "layout/basic.html" %}
+{% load boostrap4 %}
+{% block title %} Вхід {% endblock %}
+
+{% block content %}
+<h2>Вхід</h2>
+{% if user.id_authenticated %}
+<p>Ви вже виконали вхід</p>
+{% else %}
+<form method="post">
+  {% csrf_token %}
+  {% boostrap_form form layout='horizontal' %}
+  <input type="hidden" name="text" value="{{ next }}">
+  {% buttons submit="Віійти" %}{% endbuttons %}
+</form>
+{% endif %}
+{% endblock %}
