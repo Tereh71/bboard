@@ -6,10 +6,9 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.views import LogoutView
 from django.contrib.auth.mixins import LoginRequiredMixin
-
-from django.views.generic.edit omport UpdateView
+from django.views.generic.edit import UpdateView
 from django.contrib.messages.views import SuccessMessageMixin
-from django.urls import reserve_lazy
+#from django.urls import reserve_lazy
 from django.shortcuts import get_object_or_404
 from .models import AdvUser
 from .forms import ChangeUserInfoForm
@@ -34,7 +33,7 @@ def profile(request):
 class BBLogoutView(LoginRequiredMixin, LogoutView):
     template_name = 'main/logout.html'
 
-    
+
 class ChangeUserInfoForm (SuccessMessageMixin, LoginRequiredMixin, UpdateView):
     model = AdvUser
     template_name = 'main/change_info.html'
