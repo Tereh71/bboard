@@ -8,7 +8,7 @@ from django.contrib.auth.views import LogoutView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic.edit import UpdateView
 from django.contrib.messages.views import SuccessMessageMixin
-#from django.urls import reserve_lazy
+from django.urls import reserve_lazy
 from django.shortcuts import get_object_or_404
 from .models import AdvUser
 from .forms import ChangeUserInfoForm
